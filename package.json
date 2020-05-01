@@ -41,7 +41,9 @@
     "dev": "start-test 2222 cypress:open",
     "test-watch": "npm run test --silent -- --watch",
     "test": "jest",
-    "make-empty-commit": "node node_modules/make-empty-github-commit/bin/empty.js --repo cypress-io/cypress-documentation"
+    "make-empty-commit": "node node_modules/make-empty-github-commit/bin/empty.js --repo cypress-io/cypress-documentation",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -155,6 +157,8 @@
     "moment": "2.24.0",
     "roboto-fontface": "0.10.0",
     "scrollingelement": "1.5.2",
-    "yall": "github:malchata/yall.js#1c782f1ab7a0becb1a88fd6f3b260e55d5e213a2"
-  }
+    "yall": "github:malchata/yall.js#1c782f1ab7a0becb1a88fd6f3b260e55d5e213a2",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
